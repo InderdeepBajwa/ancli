@@ -8,7 +8,7 @@ Ancli is a CLI to create and maintain Ansible projects.
 2. Drop the `ancli` binary into a preferred path
 3. Binary can be run using `ancli` if added to the $PATH or `/path/to/ancli`. See commands below.
 
-## Commands
+## Usage
 
 ### Create a new Ansible project and role(s)
 
