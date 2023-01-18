@@ -27,7 +27,7 @@ func CreateAnsibleProjectAction(c *cli.Context) error {
 	}
 
 	// Prompt and create role(s)
-	doesUserNeedRoleDirectory()
+	doesUserNeedRoleDirectory(c.String("name"))
 
 	fmt.Println("Project created successfully.")
 	return nil
@@ -70,6 +70,7 @@ func createAnsibleProject(c *cli.Context) error {
 }
 
 func doesUserNeedRoleDirectory(projectName string) string {
+	fmt.Println(projectName + "PROJECT NAME")
 	for {
 		fmt.Print("Do you want to create Ansible role in this project? Y/n ")
 
@@ -106,18 +107,18 @@ func createRoleDirectory(projectName string, roleName string) error {
 		return errors.New(fmt.Sprint("Can't create directory for role ", roleName))
 	}
 
-	for _, destination := range mainDirectoryStructure {
+	for _, destination := range roleDirectoryStructure {
 		if destination.Type == "directory" {
-			if err := os.Mkdir(fmt.Sprint(pathToRole, destination.Path, "/", roleName, "/",
+			if err := os.Mkdir(fmt.Sprint(projectName, destination.Path, "/", roleName,
 				destination.Name), os.ModePerm); err != nil {
 				log.Fatal(err)
 				return errors.New("Can't create " + destination.Type + " at " +
 					destination.Path + "/" + destination.Name)
 			}
 		} else {
-			pathToFile := fmt.Sprint(projectName, destination.Path, "/", roleName, "/")
-			fullFileToCreatePath := fmt.Sprint(projectName, destination.Path, "/", roleName,
-				"/", destination.Name)
+			pathToFile := fmt.Sprint(projectName, destination.Path, "/", roleName)
+			fullFileToCreatePath := fmt.Sprint(projectName, destination.Path, "/",
+				roleName, destination.Name)
 
 			if _, err := os.Stat(pathToFile); os.IsNotExist(err) {
 				os.MkdirAll(pathToFile, 0777)

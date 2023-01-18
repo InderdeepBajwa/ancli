@@ -95,12 +95,24 @@ var mainDirectoryStructure = [...]AnsibleTemplateFile{
 var roleDirectoryStructure = [...]AnsibleTemplateFile{
 	// Tasks
 	{
+		Name:    "/tasks",
+		Path:    "/roles",
+		Type:    "directory",
+		Content: "",
+	},
+	{
 		Name:    "/tasks/main.yml",
 		Path:    "/roles",
 		Type:    "file",
 		Content: "",
 	},
 	// Handlers file
+	{
+		Name:    "/handlers",
+		Path:    "/roles",
+		Type:    "directory",
+		Content: "",
+	},
 	{
 		Name:    "/handlers/main.yml",
 		Path:    "/roles",
@@ -109,6 +121,12 @@ var roleDirectoryStructure = [...]AnsibleTemplateFile{
 	},
 	// Template file to use with the template resource
 	{
+		Name:    "/templates",
+		Path:    "/roles",
+		Type:    "directory",
+		Content: "",
+	},
+	{
 		Name:    "/templates/ntp.conf.j2",
 		Path:    "/roles",
 		Type:    "file",
@@ -116,12 +134,24 @@ var roleDirectoryStructure = [...]AnsibleTemplateFile{
 	},
 	// Static files that can be used with the copy resource
 	{
-		Name:    "files/bar.txt",
+		Name:    "/files",
+		Path:    "/roles",
+		Type:    "directory",
+		Content: "",
+	},
+	{
+		Name:    "/files/bar.txt",
 		Path:    "/roles",
 		Type:    "file",
 		Content: "",
 	},
 	// Variables associated with the role
+	{
+		Name:    "/vars",
+		Path:    "/roles",
+		Type:    "directory",
+		Content: "",
+	},
 	{
 		Name:    "/vars/main.txt",
 		Path:    "/roles",
@@ -130,12 +160,24 @@ var roleDirectoryStructure = [...]AnsibleTemplateFile{
 	},
 	// Default lower priority variables for the role
 	{
+		Name:    "/defaults",
+		Path:    "/roles",
+		Type:    "directory",
+		Content: "",
+	},
+	{
 		Name:    "/defaults/main.txt",
 		Path:    "/roles",
 		Type:    "file",
 		Content: "",
 	},
 	// Role dependencies
+	{
+		Name:    "/meta",
+		Path:    "/roles",
+		Type:    "directory",
+		Content: "",
+	},
 	{
 		Name:    "/meta/main.txt",
 		Path:    "/roles",
