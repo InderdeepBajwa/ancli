@@ -2,7 +2,7 @@
 
 Ancli is a CLI to create and maintain Ansible projects.
 
-## Usage
+## Installation
 
 1. Download [the latest binary release by clicking here]([https://Test](https://github.com/InderdeepBajwa/ancli/releases/download))
 2. Drop the `ancli` binary into a preferred path
