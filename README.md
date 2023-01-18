@@ -6,7 +6,7 @@ Inspired by the [office Ansible directory layout recommendations](https://docs.a
 
 ## Installation
 
-1. Download [the latest binary release by clicking here](https://github.com/InderdeepBajwa/ancli/releases/download)
+1. Download [the latest binary release by clicking here](https://github.com/InderdeepBajwa/ancli/tags)
 2. Drop the `ancli` binary into a preferred path
 3. Binary can be run using `ancli` if added to the $PATH or `/path/to/ancli`. See commands below.
 
