@@ -30,3 +30,5 @@ Creating role configureWebServers...
 Do you want to create Ansible role in this project? Y/n n
 Project created successfully.
 ```
+The above example creates the following project structure:
+![image](https://user-images.githubusercontent.com/20612193/213058705-8844edfe-d7eb-467f-bf2b-7094e8daffb6.png)
