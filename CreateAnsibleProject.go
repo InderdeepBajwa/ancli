@@ -70,7 +70,6 @@ func createAnsibleProject(c *cli.Context) error {
 }
 
 func doesUserNeedRoleDirectory(projectName string) string {
-	fmt.Println(projectName + "PROJECT NAME")
 	for {
 		fmt.Print("Do you want to create Ansible role in this project? Y/n ")
 
