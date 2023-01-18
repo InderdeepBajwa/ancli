@@ -186,21 +186,21 @@ var roleDirectoryStructure = [...]AnsibleTemplateFile{
 	},
 	// Custom modules for roles
 	{
-		Name:    "library",
+		Name:    "/library",
 		Path:    "/roles",
 		Type:    "directory",
 		Content: "",
 	},
 	// Custom module_utils for roles
 	{
-		Name:    "module_utils",
+		Name:    "/module_utils",
 		Path:    "/roles",
 		Type:    "directory",
 		Content: "",
 	},
 	// Custom lookup_plugins for roles
 	{
-		Name:    "lookup_plugins",
+		Name:    "/lookup_plugins",
 		Path:    "/roles",
 		Type:    "directory",
 		Content: "",
