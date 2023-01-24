@@ -99,7 +99,7 @@ func createRoleDirectory(projectName string, roleName string) error {
 
 	pathToRole := fmt.Sprint(projectName, "/roles/", roleName)
 
-	fmt.Println("Creating role " + roleName + "...")
+	fmt.Println("Creating role " + roleName + " in " + projectName)
 
 	if err := os.MkdirAll(pathToRole, os.ModePerm); err != nil {
 		log.Fatal(err)

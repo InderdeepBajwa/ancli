@@ -27,6 +27,24 @@ func main() {
 				},
 			},
 		},
+		{
+			Name:        "new-role",
+			HelpName:    "new-role",
+			Action:      CreateAnsibleRoleAction,
+			ArgsUsage:   ` `,
+			Usage:       "Creates a new Ansible role in a specified directory",
+			Description: "Creates a new Ansible role in a specified directory",
+			Flags: []cli.Flag{
+				&cli.StringFlag{
+					Name:  "name",
+					Usage: "Name of the role",
+				},
+				&cli.StringFlag{
+					Name:  "project",
+					Usage: "Path of the project to create a role in it",
+				},
+			},
+		},
 	}
 
 	err := app.Run(os.Args)
