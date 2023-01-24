@@ -20,7 +20,12 @@ Example: `ancli create --name myAnsibleProject`
 
 Need to add roles? Simply reply with `y` to the prompts and create as many roles as needed.
 
-#### Full example:
+### Create a new role in any Ansible project
+`ancli new-role --name nameOfRole --project nameOfProject`
+
+Example: `ancli new-role --name webservers --project primaryinfrastructure`
+
+#### Full new project create example:
 
 ```console
 $ ancli create --name testProject
